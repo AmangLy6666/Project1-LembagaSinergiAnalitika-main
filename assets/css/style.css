@@ -109,6 +109,8 @@ img {
     box-shadow: none;
 }
 
+
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 16px;
@@ -445,7 +447,14 @@ footer ul li {
     fill: rgb(255, 255, 255);
   }
   
-  button {
+  #button1 {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+  #button2 {
  --glow-color: rgb(217, 176, 255);
  --glow-spread-color: rgba(191, 123, 255, 0.781);
  --enhanced-glow-color: #303050;
@@ -453,7 +462,7 @@ footer ul li {
  border: .01em solid var(--glow-color);
  padding: 1em 3em;
  color: var(--glow-color);
- font-size: 15px;
+ font-size: 20px;
  font-weight: bold;
  background-color: var(--btn-color);
  border-radius: 1em;
@@ -466,7 +475,7 @@ footer ul li {
  transition: all 0.3s;
 }
 
-button:hover {
+ #button2:hover {
  color: var(--btn-color);
  background-color: var(--glow-color);
  box-shadow: 0 0 1em .25em var(--glow-color),
@@ -474,7 +483,7 @@ button:hover {
         inset 0 0 .75em .25em var(--glow-color);
 }
 
-button:active {
+ #button2:active {
  box-shadow: 0 0 0.6em .25em var(--glow-color),
         0 0 2.5em 2em var(--glow-spread-color),
         inset 0 0 .5em .25em var(--glow-color);
