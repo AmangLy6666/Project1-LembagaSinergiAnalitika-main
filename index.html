@@ -1,377 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lembaga Sinergi Analitika</title>
-    <link href="assets/images/LSA.png" rel="icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Lembaga Sinergi Analitika</title>
+	<link href="assets/images/LSA.png" rel="icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet">
+	<link href="./assets/css/style.css" rel="stylesheet">
 </head>
-
 <body data-bs-spy="scroll" data-bs-target="#navbar">
-
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/LSA.png" width="50" height="70" alt="LSA"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img alt="LSA" height="70" src="assets/images/LSA.png" width="50"></a> <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#aboutus">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#product">Product</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#team">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#aboutus">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="about-link" href="#services">Our Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item">
-                        <a class="social-icon" href="#"><i class="ri-twitter-line"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="social-icon" href="#"><i class="ri-facebook-line"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="social-icon" href="#"><i class="ri-linkedin-line"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+						<a class="nav-link" href="Todos.html#todos">Todos</a>
+					</li>
+				</ul>
+				<div class="navbar-nav flex-row" style="margin-left: 2em">
+					<div class="toggle-switch">
+						<label class="switch-label"><input class="checkbox" type="checkbox"> <span class="slider"></span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+    
     <!-- Home -->
-    <section id="home" class="d-flex align-items-center min-vh-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="display-2 fw-bold" data-aos="fade-up">LEMBAGA <span class="text-brand">SINERGI ANALITIKA</span></h1>
-                    <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Research and Media Analytic</h4>
-                    <div data-aos="fade-up" data-aos-delay="200"><a href="#aboutus" class="btn btn-brand">Get Started</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+	<section class="d-flex align-items-center min-vh-100" id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h1 class="display-2 fw-bold" data-aos="fade-up">LEMBAGA <span class="text-brand">SINERGI ANALITIKA</span></h1>
+					<h4 class="mt-3 mb-5" data-aos="fade-up" data-aos-delay="100">Research and Media Analytic</h4>
+					<div data-aos="fade-up" data-aos-delay="200">
+						<a class="btn btn-brand" href="#aboutus">Get Started</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
     <!-- About Us -->
-    <section id="aboutus" class="section-padding section-connector">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-                    <div class="setion-title text-center">
-                        <h1>About Sinergi Analitika</h1>
-                        <div class="line"></div>
-                        <p>Lembaga Sinergi Analitika atau yang disingkat dengan LSA adalah lembaga yang berfokus pada research di bidang media (Media Online dan Media Sosial). Lembaga ini bertujuan untuk menghadirkan aspirasi masyarakat dapat didengar oleh stakeholder. Hasil analitik akan dibuat dalam bentuk Laporan dan dipublikasi ke berbagai kanal media.
-
-                            Tidak hanya sekedar membuat konten, namun juga mendesain target komunikasi, menganalisis penyebarannya hingga menampilkan isu yang terjadi. Ada beberapa indikator dalam analisis media seperti engagement, sebaran dan popularitas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+	<section class="section-padding section-connector" id="aboutus">
+		<div class="container">
+			<div class="row">
+				<div class="col-12" data-aos="fade-up" data-aos-delay="100">
+					<div class="setion-title text-center">
+						<h1>About Sinergi Analitika</h1>
+						<div class="line"></div>
+						<p>Lembaga Sinergi Analitika atau yang disingkat dengan LSA adalah lembaga yang berfokus pada research di bidang media (Media Online dan Media Sosial). Lembaga ini bertujuan untuk menghadirkan aspirasi masyarakat dapat didengar oleh stakeholder. Hasil analitik akan dibuat dalam bentuk Laporan dan dipublikasi ke berbagai kanal media. Tidak hanya sekedar membuat konten, namun juga mendesain target komunikasi, menganalisis penyebarannya hingga menampilkan isu yang terjadi. Ada beberapa indikator dalam analisis media seperti engagement, sebaran dan popularitas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
     <!-- Services -->
-    <section id="services" class="section-padding section-connector">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h1>Our Services</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service py-5 px-6 border">
-                        <div class="service-icon">
-                            <i class="ri-camera-line"></i>
-                        </div>
-                        <h5 class="mt-4">Photography dan Videography</h5>
-                        <p>Penggunaan foto dibutuhkan sebagai sumber data analitik dan publikasi ke media massa.</p>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service py-5 px-3 border">
-                        <div class="service-icon">
-                            <i class="ri-profile-line"></i>
-                        </div>
-                        <h5 class="mt-4">Rilis Berita</h5>
-                        <p>Laporan akan disusun oleh peneliti LSA dan ditindaklanjuti dengan rilis berita ke media online dan media sosial.</p>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service py-5 px-4 border">
-                        <div class="service-icon">
-                            <i class="ri-account-circle-line"></i>
-                        </div>
-                        <h5 class="mt-3">Social Media Engagement</h5>
-                        <p>Semua informasi dipublikasi ke media online dan media sosial. Khusus untuk media sosial, meningkatkan angka engagement adalah tugas penting. Hal ini untuk memastikan masyarakat memperoleh informasi dengan baik.</p>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service py-5 px-4 border">
-                        <div class="service-icon">
-                            <i class="ri-line-chart-line"></i>
-                        </div>
-                        <h5 class="mt-4">Crawler Data</h5>
-                        <p>Mengakuisisi dataset yang dapat diambil berdasarkan kurun waktu tertentu dan secara</p>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service py-5 px-4 border">
-                        <div class="service-icon">
-                            <i class="ri-pencil-ruler-2-line"></i>
-                        </div>
-                        <h5 class="mt-4">Riset Media Analitik</h5>
-                        <p>Melakukan riset yang berkaitan dengan media analitik yang erat kaitannya dengan tata kelola informasi dan output yang berbasis literasi. Khusus para peneliti yang ingin berkontribusi membangun kebijakan berdasarkan hasil riset media analitik, LSA langsung mengundang Anda untuk turut serta membangun daerah.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+	<section class="section-padding section-connector" id="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+						<h1>Our Services</h1>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="service py-5 px-6 border">
+						<div class="service-icon">
+							<i class="ri-camera-line"></i>
+						</div>
+						<h5 class="mt-4">Photography dan Videography</h5>
+						<p>Penggunaan foto dibutuhkan sebagai sumber data analitik dan publikasi ke media massa.</p>
+					</div>
+				</div>
+				<div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="service py-5 px-3 border">
+						<div class="service-icon">
+							<i class="ri-profile-line"></i>
+						</div>
+						<h5 class="mt-4">Rilis Berita</h5>
+						<p>Laporan akan disusun oleh peneliti LSA dan ditindaklanjuti dengan rilis berita ke media online dan media sosial.</p>
+					</div>
+				</div>
+				<div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="300">
+					<div class="service py-5 px-4 border">
+						<div class="service-icon">
+							<i class="ri-account-circle-line"></i>
+						</div>
+						<h5 class="mt-3">Social Media Engagement</h5>
+						<p>Semua informasi dipublikasi ke media online dan media sosial. Khusus untuk media sosial, meningkatkan angka engagement adalah tugas penting. Hal ini untuk memastikan masyarakat memperoleh informasi dengan baik.</p>
+					</div>
+				</div>
+				<div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="400">
+					<div class="service py-5 px-4 border">
+						<div class="service-icon">
+							<i class="ri-line-chart-line"></i>
+						</div>
+						<h5 class="mt-4">Crawler Data</h5>
+						<p>Mengakuisisi dataset yang dapat diambil berdasarkan kurun waktu tertentu dan secara</p>
+					</div>
+				</div>
+				<div class="col-lg-12 col-sm-4" data-aos="fade-up" data-aos-delay="400">
+					<div class="service py-5 px-4 border">
+						<div class="service-icon">
+							<i class="ri-pencil-ruler-2-line"></i>
+						</div>
+						<h5 class="mt-4">Riset Media Analitik</h5>
+						<p>Melakukan riset yang berkaitan dengan media analitik yang erat kaitannya dengan tata kelola informasi dan output yang berbasis literasi. Khusus para peneliti yang ingin berkontribusi membangun kebijakan berdasarkan hasil riset media analitik, LSA langsung mengundang Anda untuk turut serta membangun daerah.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
     <!-- Product -->
-    <section id="resume" class="section-padding section-connector">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-                    <div class="setion-title text-center">
-                        <h1>Our Product</h1>
-                        <p>Kami telah menghasilkan beberapa produk dan aplikasi yang sedang digunakan oleh client kami hingga saat ini</p>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-5">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-                            <div class="eduexp p-5 pt-0">
-                                <h3>GSMH</h3>
-                                <p class="mb-0">Government Social Media Handling</p>
-                            </div>
-                        </div>
-                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                            <div class="eduexp p-5 pt-0">
-                                <h3>OLDS</h3>
-                                <p class="mb-0">Online Letter Disposition System</p>
-                            </div>
-                        </div>
-                        <div class="col-13" data-aos="fade-up" data-aos-delay="100">
-                            <div class="eduexp p-5 pt-0">
-                                <h3>DPIS</h3>
-                                <p class="mb-0">Data and Public Information System</p>
-                            </div>
-                        </div>
-                        <div class="col-13" data-aos="fade-up" data-aos-delay="200">
-                            <div class="eduexp p-5 pt-0">
-                                <h3>MAPS</h3>
-                                <p class="mb-0">Meeting Agenda Plan Summary</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+	<section class="section-padding section-connector" id="product">
+		<div class="container">
+			<div class="row">
+				<div class="col-12" data-aos="fade-up" data-aos-delay="100">
+					<div class="setion-title text-center">
+						<h1>Our Product</h1>
+						<p>Kami telah menghasilkan beberapa produk dan aplikasi yang sedang digunakan oleh client kami hingga saat ini</p>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row gy-5">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-12" data-aos="fade-up" data-aos-delay="100">
+							<div class="eduexp p-5 pt-0">
+								<h3>GSMH</h3>
+								<p class="mb-0">Government Social Media Handling</p>
+							</div>
+						</div>
+						<div class="col-12" data-aos="fade-up" data-aos-delay="200">
+							<div class="eduexp p-5 pt-0">
+								<h3>OLDS</h3>
+								<p class="mb-0">Online Letter Disposition System</p>
+							</div>
+						</div>
+						<div class="col-13" data-aos="fade-up" data-aos-delay="100">
+							<div class="eduexp p-5 pt-0">
+								<h3>DPIS</h3>
+								<p class="mb-0">Data and Public Information System</p>
+							</div>
+						</div>
+						<div class="col-13" data-aos="fade-up" data-aos-delay="200">
+							<div class="eduexp p-5 pt-0">
+								<h3>MAPS</h3>
+								<p class="mb-0">Meeting Agenda Plan Summary</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
     <!-- Team -->
-    <section id="blog" class="section-padding section-connector">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h1>Team</h1>
-                        <p>Tim kami terus bersinergi untuk memberikan kepuasan yang lebih baik kepada clients</p>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-5">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bp">
-                        <img src="./assets/images/team-abah.jpeg" alt="">
-                        <div class="bp-content pt-4">
-                            <h4>Adam Bachtiar, M.MT.</h4>
-                            <p>Sistem Informasi</p>
-                            <a href="#" class="custom-link">
-                                <ul class="navbar-nav flex-row">
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bp">
-                        <img src="./assets/images/team-ashril.jpeg" alt="">
-                        <div class="bp-content pt-4">
-                            <h4>Ahmad Ashril Rizal, M.Cs.</h4>
-                            <p>Artificial Intelligence</p>
-                            <a href="#" class="custom-link">
-                                <ul class="navbar-nav flex-row">
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bp">
-                        <img src="./assets/images/team-jian.jpeg" alt="">
-                        <div class="bp-content pt-4">
-                            <h4>Jian Budiarto, M.Eng.</h4>
-                            <p>Teknologi Informasi</p>
-                            <a href="#" class="custom-link">
-                                <ul class="navbar-nav flex-row">
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="social-icon" href="#"><i class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+	<section class="section-padding section-connector" id="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+						<h1>Team</h1>
+						<p>Tim kami terus bersinergi untuk memberikan kepuasan yang lebih baik kepada clients</p>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row gy-5">
+				<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp">
+						<img alt="" src="./assets/images/team-abah.jpeg">
+						<div class="bp-content pt-4">
+							<h4>Adam Bachtiar, M.MT.</h4>
+							<p>Sistem Informasi</p><a class="custom-link" href="#">
+							<ul class="navbar-nav flex-row">
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-twitter-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-facebook-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-instagram-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-linkedin-line"></i></li>
+							</ul></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="bp">
+						<img alt="" src="./assets/images/team-ashril.jpeg">
+						<div class="bp-content pt-4">
+							<h4>Ahmad Ashril Rizal, M.Cs.</h4>
+							<p>Artificial Intelligence</p><a class="custom-link" href="#">
+							<ul class="navbar-nav flex-row">
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-twitter-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-facebook-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-instagram-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-linkedin-line"></i></li>
+							</ul></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+					<div class="bp">
+						<img alt="" src="./assets/images/team-jian.jpeg">
+						<div class="bp-content pt-4">
+							<h4>Jian Budiarto, M.Eng.</h4>
+							<p>Teknologi Informasi</p><a class="custom-link" href="#">
+							<ul class="navbar-nav flex-row">
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-twitter-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-facebook-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-instagram-line"></i></li>
+								<li class="nav-item"></li>
+								<li style="list-style: none"><i class="ri-linkedin-line"></i></li>
+							</ul></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
     <!-- Contact -->
-    <section id="contact" class="section-connector">
-        <div class="container section-padding">
-            <div class="row">
-                <div class="col-12">
-                    <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h1>Contact</h1>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row gy-5">
-                        <h4>Our Social media</h4>              
-                        <div class="cardContainer">
-                            <button id="button2" class="profileDiv" >Follow Us!</button>
-                            <div class="infoDiv">
-                                <div class="nameDiv">
-                                </div>
-                                
-                                <div class="socialDiv">
-                                    <a href="#"><svg viewBox="0 0 496 512" class="socials facebook"><path d="M279.1 288l14.3-92.7h-89v-60c0-25.4 12.5-50.2 52.3-50.2H297V6.4S260.4 0 225.4 0C152 0 104.3 44.4 104.3 124.7v70.6H22.9V288h81.4v224h100.2V288z"/></svg>
-                                    <a href="#"><svg viewBox="0 0 496 512" class="socials twitter"><path d="M459.4 151.7c.3 4.6.3 9.1.3 13.7 0 138.7-105.6 298.5-298.6 298.5A296.5 296.5 0 0 1 0 417a217 217 0 0 0 25.3 1.2c49 0 94.3-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8a111 111 0 0 0 47.4-2 105 105 0 0 1-84.1-103v-1.2c14 7.8 30.2 12.6 47.4 13.3A104.9 104.9 0 0 1 35.7 67.2a298.3 298.3 0 0 0 216.4 109.9 104.9 104.9 0 0 1 179-95.8 206.6 206.6 0 0 0 66.6-25.4 104.7 104.7 0 0 1-46.1 57.8c21-2.3 41.6-8.1 60.4-16.2a225.6 225.6 0 0 1-52.6 54.2z"/></svg>
-                                    <a href="#"><svg viewBox="0 0 448 512" class="socials linkdin"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
-                                    <a href="#"><svg viewBox="0 0 448 512" class="socials instagram"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+	<section class="section-connector" id="contact">
+		<div class="container section-padding">
+			<div class="row">
+				<div class="col-12">
+					<div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+						<h1>Contact</h1>
+						<p>Untuk informasi lebih lanjut tentang kami, serta bagaimana kami dapat membantu clients, isi form dibawah ini</p>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-8" data-aos="fade-up" data-aos-delay="200">
+					<form action="#" class="row g-3">
+						<div class="form-group col-md-4">
+							<input class="form-control" placeholder="Name" type="text">
+						</div>
+						<div class="form-group col-md-4">
+							<input class="form-control" placeholder="Phone Number" type="text">
+						</div>
+						<div class="form-group col-md-4">
+							<input class="form-control" placeholder="Email Address" type="email">
+						</div>
+						<div class="form-group col-md-12">
+							<input class="form-control" placeholder="Enter Subject" type="text">
+						</div>
+						<div class="form-group col-md-12">
+							<textarea class="form-control" name="message" placeholder="Enter Your Message" rows="4"></textarea>
+						</div>
+						<div class="form-group text-center col-md-12">
+							<button class="btn btn-brand">Send Message</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row gy-5">
+                            <h4>Our Social media</h4>
+                            <div class="cardContainer">
+                                <button class="profileDiv" id="button2">Follow Us!</button>
+                                <div class="infoDiv">
+                                    <div class="nameDiv"></div>
+                                    <div class="socialDiv">
+                                        <a href="#"><svg class="socials facebook" viewbox="0 0 496 512">
+                                        <path d="M279.1 288l14.3-92.7h-89v-60c0-25.4 12.5-50.2 52.3-50.2H297V6.4S260.4 0 225.4 0C152 0 104.3 44.4 104.3 124.7v70.6H22.9V288h81.4v224h100.2V288z"></path></svg></a> <a href="#"><svg class="socials twitter" viewbox="0 0 496 512">
+                                        <path d="M459.4 151.7c.3 4.6.3 9.1.3 13.7 0 138.7-105.6 298.5-298.6 298.5A296.5 296.5 0 0 1 0 417a217 217 0 0 0 25.3 1.2c49 0 94.3-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8a111 111 0 0 0 47.4-2 105 105 0 0 1-84.1-103v-1.2c14 7.8 30.2 12.6 47.4 13.3A104.9 104.9 0 0 1 35.7 67.2a298.3 298.3 0 0 0 216.4 109.9 104.9 104.9 0 0 1 179-95.8 206.6 206.6 0 0 0 66.6-25.4 104.7 104.7 0 0 1-46.1 57.8c21-2.3 41.6-8.1 60.4-16.2a225.6 225.6 0 0 1-52.6 54.2z"></path></svg></a> <a href="#"><svg class="socials linkdin" viewbox="0 0 448 512">
+                                        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a> <a href="#"><svg class="socials instagram" viewbox="0 0 448 512">
+                                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-md-3 ms-auto">
+                                <h4>Useful Links</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Terms of service</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                    <li>Email: <a href="mailto:mail@sinergianalitika.com">mail@sinergianalitika.com</a>
+                                    </li>
+                                    <li>Phone: <a href="https://api.whatsapp.com/send?phone=+62%2081802717122">081802717122</a>
+                                    </li>
+                                    <li>Alamat: Perumahan Griya Rumak Asri Blok D No. 9, Kediri, Lombok Barat, 83362</li>
+                                </ul>
+                            </div>
+                            <div class="map-container">
+                                <iframe allowfullscreen src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d986.1302598207217!2d116.12839744021558!3d-8.641892945618267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1651844469415!5m2!1sen!2sid"></iframe>
+                            </div>
                         </div>
-                        <div class="col-md-3 ms-auto">
-                            <h4>Useful Links</h4>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Terms of service</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li>Email: <a href="mailto:mail@sinergianalitika.com">mail@sinergianalitika.com</a></li>
-                                <li>Phone: <a href="https://api.whatsapp.com/send?phone=+62 81802717122">+62 81802717122</a></li>
-                                <li>Alamat: Perumahan Griya Rumak Asri Blok D No. 9, Kediri, Lombok Barat, 83362</li>
-                            </ul>
-                        </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d986.1302598207217!2d116.12839744021558!3d-8.641892945618267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1651844469415!5m2!1sen!2sid" width="100%" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-auto">
-                            <p class="mb-0">Copyright @</p>
-                        </div>
-                        <div class="col-auto">
-                            <p class="mb-0">designed by Amar</a></p>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <p class="mb-0">© Copyright <a href="https://sinergianalitika.com"><b>LSA</b></a> All Rights Reserved</p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="mb-0">designed by Abu Ammar</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./assets/js/app.js"></script>
-    <script>
-        $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 0) {
-            $('body').addClass('scrolled');
-        } else {
-            $('body').removeClass('scrolled');
-        }
-    });
-    </script>
-</body>
-
-</html>
+            </footer>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+        </script> 
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js">
+        </script> 
+        <script src="https://unpkg.com/aos@next/dist/aos.js">
+        </script> 
+        <script src="./assets/js/app.js">
+        </script> 
+        <script src="assets/js/bootstrap.bundle.min.js">
+        </script> 
+        <script src="assets/js/jquery.min.js">
+        </script> 
+        <script>
+                               $(window).on("scroll", function () {
+                                 if ($(window).scrollTop() > 0) {
+                                   $("body").addClass("scrolled");
+                                 } else {
+                                   $("body").removeClass("scrolled");
+                                 }
+                               });
+        </script> 
+    </body>
+    </html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Lembaga Sinergi Analitika</title>
+	<link href="assets/images/LSA.png" rel="icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="./assets/css/style.css" rel="stylesheet">
+	<style>
+	          /* Navbar */
+	          .navbar {
+	            background-color: #fff;
+	            transition: background-color 0.3s ease;
+	          }
+	        
+	          .navbar.scrolled {
+	            background-color: #f8f9fa;
+	          }
+	        
+	          /* Todo List */
+	          .todo-container {
+	            max-width: 700px;
+	            margin: auto;
+	            padding: 2rem;
+	            background-color: #fff;
+	            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	            border-radius: 10px;
+	          }
+	        
+	          .date-hour {
+	            text-align: center;
+	            margin-bottom: 1rem;
+	          }
+	        
+	          #todo-form p {
+	            margin-bottom: 1rem;
+	          }
+	        
+	          .form-control {
+	            display: flex;
+	          }
+	        
+	          .form-control input {
+	            flex: 1;
+	            padding: 0.5rem;
+	            border: 1px solid #ccc;
+	            border-radius: 5px 0 0 5px;
+	            outline: none;
+	          }
+	        
+	          .form-control button {
+	            background-color: #007bff;
+	            border: none;
+	            outline: none;
+	            color: #fff;
+	            padding: 1rem 1rem;
+	            border-radius: 0 5px 5px 0;
+	            cursor: pointer;
+	          }
+	        
+	          .task-item {
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+	            margin-bottom: 0.5rem;
+	            padding: 0.5rem;
+	            background-color: #f8f9fa;
+	            border-radius: 5px;
+	          }
+	        
+	          .edit-button,
+	          .delete-button {
+	            background-color: transparent;
+	            border: none;
+	            outline: none;
+	            cursor: pointer;
+	            font-size: 1rem;
+	            padding: 0;
+	            margin-left: 0.5rem;
+	          }
+	        
+	          .dark-mode {
+	            background-color: #343a40;
+	            color: #000000;
+	          }
+	        
+	          body {
+	            transition: background-color 0.3s ease;
+	          }
+	        
+	          .dark-mode .navbar {
+	            background-color: #343a40;
+	            color: #fff;
+	          }
+	        
+	          .dark-mode .form-control input {
+	            background-color: #343a40;
+	            color: #fff;
+	            border-color: #343a40;
+	          }
+	        
+	          .dark-mode .form-control button {
+	            background-color: #6c757d;
+	          }
+	        
+	          .dark-mode .task-item {
+	            background-color: #343a40;
+	            color: #fff;
+	          }
+	        
+	          .dark-mode .edit-button,
+	          .dark-mode .delete-button {
+	            color: #fff;
+	          }
+	</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img alt="LSA" height="70" src="assets/images/LSA.png" width="50"></a> <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#aboutus">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#product">Product</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#blog">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Todos</a>
+					</li>
+				</ul>
+				<div class="navbar-nav flex-row" style="margin-left: 2em">
+					<div class="toggle-switch">
+						<label class="switch-label"><input class="checkbox" type="checkbox"> <span class="slider"></span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section class="d-flex align-items-center min-vh-100" id="home">
+		<div class="todo-container">
+			<div class="date-hour">
+				<p id="date"></p>
+				<p id="hour"></p>
+			</div>
+			<header>
+				<h1>To Do List</h1>
+			</header>
+			<form id="todo-form" name="todo-form">
+				<p>Tambahkan Tugas</p>
+				<div class="form-control">
+					<input id="todo-input" placeholder="Ketik tugas disini" type="text"> <button type="submit"><i class="ri-add-line"></i></button>
+				</div>
+			</form>
+			<ul id="todo-list"></ul>
+		</div>
+	</section>
+	
+	<!-- Home -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+	</script> 
+	<script src="https://unpkg.com/aos@next/dist/aos.js">
+	</script> 
+	<script>
+window.onscroll = function() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.getElementById('navbar').classList.add('scrolled');
+        } else {
+            document.getElementById('navbar').classList.remove('scrolled');
+        }
+    }
+
+    // AOS
+    AOS.init({
+        duration: 800,
+    });
+
+    // Switch Toggle
+    const toggleSwitch = document.querySelector('.toggle-switch');
+    const checkbox = toggleSwitch.querySelector('.checkbox');
+    const body = document.body;
+
+    function toggleMode(isDarkMode) {
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            checkbox.checked = true;
+        } else {
+            body.classList.remove('dark-mode');
+            checkbox.checked = false;
+        }
+    }
+
+    toggleSwitch.addEventListener('click', function() {
+        if (checkbox.checked) {
+            toggleMode(false);
+            localStorage.setItem('isDarkMode', 'false');
+        } else {
+            toggleMode(true);
+            localStorage.setItem('isDarkMode', 'true');
+        }
+    });
+
+    const storedMode = localStorage.getItem('isDarkMode');
+
+    if (storedMode === 'true') {
+        toggleMode(true);
+    } else {
+        toggleMode(false);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var todoForm = document.getElementById('todo-form');
+        var todoList = document.getElementById('todo-list');
+
+        function createTaskElement(task) {
+            var listItem = document.createElement('li');
+            listItem.innerText = task;
+            listItem.className = 'task-item';
+
+            var editButton = document.createElement('button');
+            editButton.innerHTML = '<i class="ri-edit-line"></i>';
+            editButton.className = 'edit-button';
+            editButton.addEventListener('click', function () {
+                editTask(listItem);
+            });
+
+            var deleteButton = document.createElement('button');
+            deleteButton.innerHTML = '<i class="ri-delete-bin-line"></i>';
+            deleteButton.className = 'delete-button';
+            deleteButton.addEventListener('click', function () {
+                deleteTask(listItem);
+            });
+
+            listItem.appendChild(editButton);
+            listItem.appendChild(deleteButton);
+
+            return listItem;
+        }
+
+        function addTask(task) {
+            var listItem = createTaskElement(task);
+            todoList.appendChild(listItem);
+        }
+
+        todoForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var taskInput = document.getElementById('todo-input');
+            var task = taskInput.value.trim();
+            if (task !== '') {
+                addTask(task);
+                taskInput.value = '';
+            }
+        });
+
+        function editTask(listItem) {
+            var task = listItem.innerText;
+            var newTask = prompt('Apakah anda ingin menyelesaikan tugas ini?', task);
+            if (newTask !== null && newTask.trim() !== '') {
+                listItem.innerText = newTask;
+                afterEditTask(); // Call the function after completing the edit
+            }
+        }
+
+        function deleteTask(listItem) {
+            if (confirm('Apakah anda yakin ingin menghapus tugas ini?')) {
+                todoList.removeChild(listItem);
+            }
+        }
+
+        function afterEditTask() {
+            // Function to be executed after completing the edit
+            console.log("Task edited successfully");
+        }
+    });
+	</script>
+</body>
+</html>

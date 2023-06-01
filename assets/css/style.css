@@ -12,6 +12,111 @@
     --transition: all .4s cubic-bezier(.165, .84, .44, 1);
     --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
 }
+	       .navbar {
+	         background-color: #fff;
+	         transition: background-color 0.3s ease;
+	       }
+	     
+	       .navbar.scrolled {
+	         background-color: #f8f9fa;
+	       }
+	     
+	       /* Todo List */
+	       .todo-container {
+	         max-width: 600px;
+	         margin: auto;
+	         padding: 2rem;
+	         background-color: #fff;
+	         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	         border-radius: 5px;
+	       }
+	     
+	       .date-hour {
+	         text-align: center;
+	         margin-bottom: 2rem;
+	       }
+	     
+	       #todo-form p {
+	         margin-bottom: 1rem;
+	       }
+	     
+	       .form-control {
+	         display: flex;
+	       }
+	     
+	       .form-control input {
+	         flex: 1;
+	         padding: 0.5rem;
+	         border: 1px solid #ccc;
+	         border-radius: 5px 0 0 5px;
+	         outline: none;
+	       }
+	     
+	       .form-control button {
+	         background-color: #007bff;
+	         border: none;
+	         outline: none;
+	         color: #fff;
+	         padding: 0.5rem 1rem;
+	         border-radius: 0 5px 5px 0;
+	         cursor: pointer;
+	       }
+	     
+	       .task-item {
+	         display: flex;
+	         align-items: center;
+	         justify-content: space-between;
+	         margin-bottom: 0.5rem;
+	         padding: 0.5rem;
+	         background-color: #f8f9fa;
+	         border-radius: 5px;
+	       }
+	     
+	       .edit-button,
+	       .delete-button {
+	         background-color: transparent;
+	         border: none;
+	         outline: none;
+	         cursor: pointer;
+	         font-size: 1rem;
+	         padding: 0;
+	         margin-left: 0.5rem;
+	       }
+	     
+	       .dark-mode {
+	         background-color: #343a40;
+	         color: #fff;
+	       }
+	     
+	       /* Additional Styles */
+	       body {
+	         transition: background-color 0.3s ease;
+	       }
+	     
+	       .dark-mode .navbar {
+	         background-color: #343a40;
+	         color: #fff;
+	       }
+	     
+	       .dark-mode .form-control input {
+	         background-color: #343a40;
+	         color: #fff;
+	         border-color: #343a40;
+	       }
+	     
+	       .dark-mode .form-control button {
+	         background-color: #6c757d;
+	       }
+	     
+	       .dark-mode .task-item {
+	         background-color: #343a40;
+	         color: #fff;
+	       }
+	     
+	       .dark-mode .edit-button,
+	       .dark-mode .delete-button {
+	         color: #fff;
+	       }
 
 /* Reset & Helpers */
 body {
@@ -33,7 +138,7 @@ h5,
 h6,
 .h6 {
     font-weight: 700;
-    color: var(--c-dark);
+    color: var(--blue);
 }
 
 
@@ -487,4 +592,73 @@ footer ul li {
  box-shadow: 0 0 0.6em .25em var(--glow-color),
         0 0 2.5em 2em var(--glow-spread-color),
         inset 0 0 .5em .25em var(--glow-color);
+}
+.map-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 30%;
+	height: 0;
+}
+.map-container iframe {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.toggle-switch {
+	position: relative;
+	width: 70px;
+	height: 35px;
+	--light: #303050;
+	--blue: #0d6efd;
+	--link: rgb(27, 129, 112);
+	--link-hover: rgb(24, 94, 82);
+}
+.switch-label {
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	background-color: var(--dark);
+	border-radius: 17.5px;
+	cursor: pointer;
+	border: 2px solid var(--light);
+}
+.checkbox {
+	position: absolute;
+	display: none;
+}
+.slider {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 17.5px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.checkbox:checked~.slider {
+	background-color: var(--c-dark);
+}
+.slider::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 6px;
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 11px -3px 0px 0px var(--blue);
+	box-shadow: inset 11px -3px 0px 0px var(--blue);
+	background-color: var(--dark);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.checkbox:checked~.slider::before {
+	-webkit-transform: translateX(35px) translateY(-50%);
+	-ms-transform: translateX(35px) translateY(-50%);
+	transform: translateX(35px) translateY(-50%);
+	background-color: var(--blue);
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
