@@ -14,7 +14,6 @@ const toggleSwitch = document.querySelector('.toggle-switch');
 const checkbox = toggleSwitch.querySelector('.checkbox');
 const body = document.body;
 
-
 function toggleMode(isDarkMode) {
 	if (isDarkMode) {
 		body.classList.add('dark-mode');
