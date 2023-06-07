@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Lembaga Sinergi Analitika</title>
+	<link href="assets/images/LSA.png" rel="icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="./assets/css/style.css" rel="stylesheet">
+	<style>
+	             /* Navbar */
+	             .navbar {
+	               background-color: #fff;
+	               transition: background-color 0.3s ease;
+	             }
+	           
+	             .navbar.scrolled {
+	               background-color: #f8f9fa;
+	             }
+	           
+	             /* Todo List */
+	             .todo-container {
+	               max-width: 700px;
+	               margin: auto;
+	               padding: 2rem;
+	               background-color: #fff;
+	               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	               border-radius: 10px;
+	             }
+	           
+	             .date-hour {
+	               text-align: center;
+	               margin-bottom: 1rem;
+	             }
+	           
+	             #todo-form p {
+	               margin-bottom: 1rem;
+	             }
+	           
+	             .form-control {
+	               display: flex;
+	             }
+	           
+	             .form-control input {
+	               flex: 1;
+	               padding: 0.5rem;
+	               border: 1px solid #ccc;
+	               border-radius: 5px 0 0 5px;
+	               outline: none;
+	             }
+	           
+	             .form-control button {
+	               background-color: #007bff;
+	               border: none;
+	               outline: none;
+	               color: #fff;
+	               padding: 1rem 1rem;
+	               border-radius: 0 5px 5px 0;
+	               cursor: pointer;
+	             }
+	           
+	             .task-item {
+	               display: flex;
+	               align-items: center;
+	               justify-content: space-between;
+	               margin-bottom: 0.5rem;
+	               padding: 0.5rem;
+	               background-color: #f8f9fa;
+	               border-radius: 5px;
+	             }
+	           
+	             .edit-button,
+	             .delete-button {
+	               background-color: transparent;
+	               border: none;
+	               outline: none;
+	               cursor: pointer;
+	               font-size: 1rem;
+	               padding: 0;
+	               margin-left: 0.5rem;
+	             }
+	           
+	             .dark-mode {
+	               background-color: #343a40;
+	               color: #000000;
+	             }
+	           
+	             body {
+	               transition: background-color 0.3s ease;
+	             }
+	           
+	             .dark-mode .navbar {
+	               background-color: #343a40;
+	               color: #fff;
+	             }
+	           
+	             .dark-mode .form-control input {
+	               background-color: #343a40;
+	               color: #fff;
+	               border-color: #343a40;
+	             }
+	           
+	             .dark-mode .form-control button {
+	               background-color: #6c757d;
+	             }
+	           
+	             .dark-mode .task-item {
+	               background-color: #343a40;
+	               color: #fff;
+	             }
+	           
+	             .dark-mode .edit-button,
+	             .dark-mode .delete-button {
+	               color: #fff;
+	             }
+	             /* ... Existing CSS styles ... */
+	</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img alt="LSA" height="70" src="assets/images/LSA.png" width="50"></a> <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#aboutus">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#product">Product</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#blog">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Todos.html">Todos</a>
+					</li>
+				</ul>
+				<div class="navbar-nav flex-row" style="margin-left: 2em">
+					<div class="toggle-switch">
+						<label class="switch-label"><input class="checkbox" type="checkbox"> <span class="slider"></span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section class="d-flex align-items-center min-vh-100" id="home">
+		<div class="todo-container">
+			<header>
+				<h1>Order Form</h1>
+			</header>
+			<form id="order-form" name="order-form">
+				<div class="mb-3">
+					<label class="form-label" for="name">Name</label> <input class="form-control" id="name" required="" type="text">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="email">Email</label> <input class="form-control" id="email" required="" type="email">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="address">Address</label> 
+					<textarea class="form-control" id="address" required="" rows="3"></textarea>
+				</div>
+				<p>Select Product:</p>
+				<div class="form-check">
+					<input class="form-check-input" id="gsmh-checkbox" name="Product" type="checkbox" value="gsmh"> <label class="form-check-label" for="gsmh-checkbox">Government Social Media Handling (GSMH) <span class="price">$X</span></label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" id="olds-checkbox" name="Product" type="checkbox" value="olds"> <label class="form-check-label" for="olds-checkbox">Online Letter Disposition System (OLDS) <span class="price">$Y</span></label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" id="dpis-checkbox" name="Product" type="checkbox" value="dpis"> <label class="form-check-label" for="dpis-checkbox">Data and Public Information System (DPIS) <span class="price">$Z</span></label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" id="maps-checkbox" name="Product" type="checkbox" value="maps"> <label class="form-check-label" for="maps-checkbox">Meeting Agenda Plan Summary (MAPS) <span class="price">$W</span></label>
+				</div><button type="submit">Submit</button>
+			</form>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+	</script> 
+	<script src="https://unpkg.com/aos@next/dist/aos.js">
+	</script> 
+	<script src="assets/js/script.js">
+	</script> 
+	<script>
+
+    // Order 
+    function encryptData(data) {    
+      var encryptedData = "";
+      for (var i = 0; i < data.length; i++) {
+        encryptedData += String.fromCharCode(data.charCodeAt(i) + 1);
+      }
+      return encryptedData;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('order-form');
+    
+   form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var products = [];
+    var checkboxes = document.querySelectorAll('input[name="Product"]:checked');
+    checkboxes.forEach(function(checkbox) {
+      products.push(checkbox.value);
+    });
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
+
+    var order = {
+      name: encryptData(name),
+      email: encryptData(email),
+      address: encryptData(address),
+      products: products
+    };
+
+    localStorage.setItem('order', JSON.stringify(order));
+
+    if (products.length > 0) {
+      alert('Produk Pilihan: ' + products.join(', '));
+     } else {
+       alert('Pilihlah setidaknya satu produk.');
+     }
+   });
+ });
+	</script>
+</body>
+</html>

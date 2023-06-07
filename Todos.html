@@ -182,116 +182,112 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js">
 	</script> 
 	<script>
-window.onscroll = function() {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-            document.getElementById('navbar').classList.add('scrolled');
-        } else {
-            document.getElementById('navbar').classList.remove('scrolled');
-        }
-    }
+		window.onscroll = function() {
+			if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+				document.getElementById('navbar').classList.add('scrolled');
+			} else {
+				document.getElementById('navbar').classList.remove('scrolled');
+			}
+		};
+	
+		// AOS
+		AOS.init({
+			duration: 800,
+		});
+	
+		// Switch Toggle
+		const toggleSwitch = document.querySelector('.toggle-switch');
+		const checkbox = toggleSwitch.querySelector('.checkbox');
+		const body = document.body;
+	
+		function toggleMode(isDarkMode) {
+			if (isDarkMode) {
+				body.classList.add('dark-mode');
+				checkbox.checked = true;
+			} else {
+				body.classList.remove('dark-mode');
+				checkbox.checked = false;
+			}
+		}
+	
+		toggleSwitch.addEventListener('click', function() {
+			if (checkbox.checked) {
+				toggleMode(false);
+				localStorage.setItem('isDarkMode', 'false');
+			} else {
+				toggleMode(true);
+				localStorage.setItem('isDarkMode', 'true');
+			}
+		});
+	
+		const storedMode = localStorage.getItem('isDarkMode');
+	
+		if (storedMode === 'true') {
+			toggleMode(true);
+		} else {
+			toggleMode(false);
+		}
 
-    // AOS
-    AOS.init({
-        duration: 800,
-    });
+		// To Do List
 
-    // Switch Toggle
-    const toggleSwitch = document.querySelector('.toggle-switch');
-    const checkbox = toggleSwitch.querySelector('.checkbox');
-    const body = document.body;
-
-    function toggleMode(isDarkMode) {
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            checkbox.checked = true;
-        } else {
-            body.classList.remove('dark-mode');
-            checkbox.checked = false;
-        }
-    }
-
-    toggleSwitch.addEventListener('click', function() {
-        if (checkbox.checked) {
-            toggleMode(false);
-            localStorage.setItem('isDarkMode', 'false');
-        } else {
-            toggleMode(true);
-            localStorage.setItem('isDarkMode', 'true');
-        }
-    });
-
-    const storedMode = localStorage.getItem('isDarkMode');
-
-    if (storedMode === 'true') {
-        toggleMode(true);
-    } else {
-        toggleMode(false);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var todoForm = document.getElementById('todo-form');
-        var todoList = document.getElementById('todo-list');
-
-        function createTaskElement(task) {
-            var listItem = document.createElement('li');
-            listItem.innerText = task;
-            listItem.className = 'task-item';
-
-            var editButton = document.createElement('button');
-            editButton.innerHTML = '<i class="ri-edit-line"></i>';
-            editButton.className = 'edit-button';
-            editButton.addEventListener('click', function () {
-                editTask(listItem);
-            });
-
-            var deleteButton = document.createElement('button');
-            deleteButton.innerHTML = '<i class="ri-delete-bin-line"></i>';
-            deleteButton.className = 'delete-button';
-            deleteButton.addEventListener('click', function () {
-                deleteTask(listItem);
-            });
-
-            listItem.appendChild(editButton);
-            listItem.appendChild(deleteButton);
-
-            return listItem;
-        }
-
-        function addTask(task) {
-            var listItem = createTaskElement(task);
-            todoList.appendChild(listItem);
-        }
-
-        todoForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            var taskInput = document.getElementById('todo-input');
-            var task = taskInput.value.trim();
-            if (task !== '') {
-                addTask(task);
-                taskInput.value = '';
-            }
-        });
-
-        function editTask(listItem) {
-            var task = listItem.innerText;
-            var newTask = prompt('Apakah anda ingin menyelesaikan tugas ini?', task);
-            if (newTask !== null && newTask.trim() !== '') {
-                listItem.innerText = newTask;
-                afterEditTask(); // Call the function after completing the edit
-            }
-        }
-
-        function deleteTask(listItem) {
-            if (confirm('Apakah anda yakin ingin menghapus tugas ini?')) {
-                todoList.removeChild(listItem);
-            }
-        }
-
-        function afterEditTask() {
-            // Function to be executed after completing the edit
-            console.log("Task edited successfully");
-        }
-    });
-	</script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var todoForm = document.getElementById('todo-form');
+			var todoList = document.getElementById('todo-list');
+	
+			function createTaskElement(task) {
+				var listItem = document.createElement('li');
+				listItem.innerText = task;
+				listItem.className = 'task-item';
+	
+				var editButton = document.createElement('button');
+				editButton.innerHTML = '<i class="ri-edit-line"></i>';
+				editButton.className = 'edit-button';
+				editButton.addEventListener('click', function() {
+					editTask(listItem);
+				});
+	
+				var deleteButton = document.createElement('button');
+				deleteButton.innerHTML = '<i class="ri-delete-bin-line"></i>';
+				deleteButton.className = 'delete-button';
+				deleteButton.addEventListener('click', function() {
+					deleteTask(listItem);
+				});
+	
+				listItem.appendChild(editButton);
+				listItem.appendChild(deleteButton);
+	
+				return listItem;
+			}
+	
+			function addTask(task) {
+				var listItem = createTaskElement(task);
+				todoList.appendChild(listItem);
+			}
+	
+			todoForm.addEventListener('submit', function(event) {
+				event.preventDefault();
+				var taskInput = document.getElementById('todo-input');
+				var task = taskInput.value.trim();
+				if (task !== '') {
+					addTask(task);
+					taskInput.value = '';
+				}
+			});
+	
+			function editTask(listItem) {
+				var task = listItem.innerText;
+				var newTask = prompt('Apakah anda ingin menyelesaikan tugas ini?', task);
+				if (newTask !== null && newTask.trim() !== '') {
+					listItem.innerText = newTask;
+				}
+			}
+	
+			function deleteTask(listItem) {
+				if (confirm('Apakah anda yakin ingin menghapus tugas ini?')) {
+					todoList.removeChild(listItem);
+				}
+			}
+		});
+	</script>	
 </body>
 </html>
