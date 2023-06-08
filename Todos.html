@@ -157,11 +157,12 @@
 			</div>
 		</div>
 	</nav>
+	
 	<section class="d-flex align-items-center min-vh-100" id="home">
 		<div class="todo-container">
 			<div class="date-hour">
-				<p id="date"></p>
-				<p id="hour"></p>
+				<h5 id="date"></h5>
+				<h6 id="hour"></h6>
 			</div>
 			<header>
 				<h1>To Do List</h1>
@@ -182,6 +183,25 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js">
 	</script> 
 	<script>
+		// Time
+        const dateElement = document.getElementById('date');
+        const hourElement = document.getElementById('hour');
+      
+        function updateDateTime() {
+          const currentDate = new Date();
+      
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          const formattedDate = currentDate.toLocaleDateString('id-ID', options);
+      
+          const formattedTime = currentDate.toLocaleTimeString('id-ID', { timeStyle: 'short' });
+      
+         dateElement.textContent = formattedDate;
+          hourElement.textContent = formattedTime;
+        }
+      
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
 		window.onscroll = function() {
 			if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
 				document.getElementById('navbar').classList.add('scrolled');
