@@ -10,3 +10,6 @@
 - https://getbootstrap.com/
 - https://icons8.com/line-awesome
 - https://michalsnik.github.io/aos/
+
+# Link Asli Website
+- https://sinergianalitika.com/
