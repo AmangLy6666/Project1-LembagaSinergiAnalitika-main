@@ -11,5 +11,5 @@
 - https://icons8.com/line-awesome
 - https://michalsnik.github.io/aos/
 
-# Link Asli Website
+# Link Copyright LSA. All Rights Reserved
 - https://sinergianalitika.com/
