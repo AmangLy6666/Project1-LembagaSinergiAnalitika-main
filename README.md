@@ -1,5 +1,5 @@
 # Link Netlify
-- https://wdp-065-amar-lemaga-sinergi-analitika.netlify.app/
+- https://project-1-amar-lemaga-sinergi-analitika.netlify.app/
 
 # Tools
 - Bootstrap 5 
