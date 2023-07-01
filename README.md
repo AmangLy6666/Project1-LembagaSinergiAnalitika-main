@@ -1,6 +1,5 @@
 # Link Netlify
-- https://project-1-amar-lemaga-sinergi-analitika.netlify.app/
-
+- https://project-1-lemaga-sinergi-analitika.netlify.app/
 # Tools
 - Bootstrap 5 
 - icons8
